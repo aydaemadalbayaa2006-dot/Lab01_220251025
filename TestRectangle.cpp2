@@ -1,0 +1,17 @@
+// Direct access to width causes a compiler error because width is private,
+// while setWidth() provides safe controlled access to the data.
+
+#include <iostream>
+#include "Rectangle.h"
+
+using namespace std;
+int main()
+{
+    Rectangle rectangle1(4, 40);
+    Rectangle rectangle2(3.5, 35.9);
+
+    rectangle1.setWidth(7);
+    cout << "width is now " << rectangle1.getWidth() << endl;
+
+    return 0;
+}
